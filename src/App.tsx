@@ -3,6 +3,10 @@ import { useToastHelpers } from './hooks/useToastHelpers';
 import { ToastProvider } from './contexts/ToastContext';
 import ToastContainer from './components/ui/ToastContainer';
 
+// Router
+import { RouterProvider } from 'react-router-dom';
+import appRoute from './routes/appRoute';
+
 const ExampleComponent: React.FC = () => {
   const { showSuccess, showError, showWarning, showInfo, showToastWithAction } = useToastHelpers();
 
@@ -61,7 +65,8 @@ function App() {
   return (
     <ToastProvider>
       <div className="App">
-        <ExampleComponent />
+        {/* <ExampleComponent /> */}
+        <RouterProvider router={appRoute} />
         <ToastContainer />
       </div>
     </ToastProvider>

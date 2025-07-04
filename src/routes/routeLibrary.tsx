@@ -5,6 +5,15 @@ import SessionBaseAuthRoute from "../pages/authentications/SessionBaseAuthRoute.
 
 import AppLayout from "../components/layout/AppLayout.tsx"
 
+// Dashboard Route
+import DashboardPageRoute from "../pages/dashboard/DashbourPageRoute.tsx"
+
+// Todo Route
+import TodoListRoute from "../pages/todos/TodosListRoute.tsx"
+import TodoCreateRoute from "../pages/todos/TodoCreateRoute.tsx"
+import TodoEditRoute from "../pages/todos/TodoEditRoute.tsx"
+import TodoViewRoute from "../pages/todos/TodoViewRoute.tsx"
+
 const authRoute = [
     {
         path: "/login",
@@ -24,10 +33,44 @@ const authRoute = [
     }
 ]
 
+const DashboardRoute = [
+    {
+        index: true,
+        path: "/dashboard",
+        element: <DashboardPageRoute />,
+        children: []
+    }
+]
+
+const TodoRoute = [
+    {
+        path: "/todos",
+        element: <TodoListRoute />,
+        children: [
+            {
+                path: "/todos/create",
+                element: <TodoCreateRoute />
+            },
+            {
+                path: "/todos/edit/:id",
+                element: <TodoEditRoute />
+            },
+            {
+                path: "/todos/view/:id",
+                element: <TodoViewRoute />
+            }
+        ]
+    },
+]
+
 const appRoute = [
     {
         path: "/",
-        element: <AppLayout />
+        element: <AppLayout />,
+        children: [
+            ...DashboardRoute,
+            ...TodoRoute
+        ]
     }
 ]
 
