@@ -1,34 +1,70 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useToastHelpers } from './hooks/useToastHelpers';
+import { ToastProvider } from './contexts/ToastContext';
+import ToastContainer from './components/ui/ToastContainer';
 
-function App() {
-  const [count, setCount] = useState(0)
+const ExampleComponent: React.FC = () => {
+  const { showSuccess, showError, showWarning, showInfo, showToastWithAction } = useToastHelpers();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="p-8 space-y-4">
+      <h1 className="text-2xl font-bold mb-6">Toast Examples</h1>
+      
+      <div className="space-y-2">
+        <button
+          onClick={() => showSuccess('Success!', 'Operation completed successfully.')}
+          className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mr-2"
+        >
+          Show Success
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        
+        <button
+          onClick={() => showError('Error!', 'Something went wrong.')}
+          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mr-2"
+        >
+          Show Error
+        </button>
+        
+        <button
+          onClick={() => showWarning('Warning!', 'Please check your input.')}
+          className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 mr-2"
+        >
+          Show Warning
+        </button>
+        
+        <button
+          onClick={() => showInfo('Info', 'Here is some information.')}
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2"
+        >
+          Show Info
+        </button>
+        
+        <button
+          onClick={() => showToastWithAction(
+            'info', 
+            'Action Required', 
+            'Click the action button to proceed.',
+            'Take Action',
+            () => alert('Action clicked!'),
+            10000
+          )}
+          className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+        >
+          Show Toast with Action
+        </button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <ToastProvider>
+      <div className="App">
+        <ExampleComponent />
+        <ToastContainer />
+      </div>
+    </ToastProvider>
   )
 }
 
