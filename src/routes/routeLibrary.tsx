@@ -1,10 +1,9 @@
+import SignInRoute from "../pages/authentications/SignInRoute.tsx"
+import SignUpRoute from "../pages/authentications/SignUpRoute.tsx"
+import AccountRecoverRoute from "../pages/authentications/AccountRecoverRoute.tsx"
+import SessionBaseAuthRoute from "../pages/authentications/SessionBaseAuthRoute.tsx"
 
-import { SignInRoute } from "./authentications/SignInRoute"
-import { SignUpRoute } from "./authentications/SignUpRoute"
-import { AccountRecoverRoute } from "./authentications/AccountRecoverRoute"
-import { SessionBaseAuthRoute } from "./authentications/SessionBaseAuthRoute"
-
-import AppLayout from "../components/layout"
+import AppLayout from "../components/layout/AppLayout.tsx"
 
 const authRoute = [
     {

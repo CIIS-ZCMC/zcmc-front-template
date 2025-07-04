@@ -1,6 +1,6 @@
 import { useAuthStore } from "../stores/authStore";
 
 export const logout = () => {
-    useAuthStore.clearAuth();
+    useAuthStore().clearAuth();
     window.location.href = '/login';
 }
