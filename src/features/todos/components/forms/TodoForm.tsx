@@ -1,32 +1,40 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import type { Todo } from "../../types/todo.types";
+import { INITIAL_TODO_DATA } from "../../constants/initial.constants";
 
 interface TodoFormProps {
-    initialTodo?: { title: string; description: string; priority: string };
-    onSubmit: (todo: { title: string; description: string; priority: string }) => Promise<boolean>;
-    onSuccess?: () => void;
+    initialTodo?: Todo;
+    onSubmit: (formData: FormData) => Promise<boolean>;
 }
 
-const TodoForm: React.FC<TodoFormProps> = ({ onSubmit, onSuccess, initialTodo }) => {
+const TodoForm: React.FC<TodoFormProps> = ({ onSubmit, initialTodo }) => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-    const [formData, setFormData] = useState(initialTodo || { title: '', description: '', priority: 'low' });
+    const [formData, setFormData] = useState(initialTodo || INITIAL_TODO_DATA);
     
+    const getFormData = () => {
+        let form = new FormData();
+
+        form.append('title', formData.title);
+        form.append('description', formData.description);
+        form.append('priority', formData.priority);
+
+        return form;
+    };
+
     const handleCancel = () => {
-        setFormData(initialTodo || { title: '', description: '', priority: 'low' });
+        setFormData(initialTodo || INITIAL_TODO_DATA);
         navigate(-1);
     };
 
     const handleSubmit = async(e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        const success = await onSubmit(formData);
+        
+        await onSubmit(getFormData());
         
         setLoading(false);
-
-        if(success) {
-            onSuccess?.();
-        }
     };  
     
     return (
