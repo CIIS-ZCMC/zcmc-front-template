@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+
+import { INITIAL_TODO_DATA } from "../../constants/initial.constants";
+import { TODO_BASE_PATH } from "../../../../constants/apiBasePath";
+
 import TodoForm from "./TodoForm";
 import useTodosActionHooks from "../../hooks/useTodosActionHooks";
-import { INITIAL_TODO_DATA } from "../../constants/initial.constants";
 
 export const TodosEditPage = () => {
     const navigate = useNavigate();
@@ -9,7 +12,7 @@ export const TodosEditPage = () => {
     const initialTodo = INITIAL_TODO_DATA;
 
     const onSuccess = () => {
-        navigate(-1);
+        navigate(TODO_BASE_PATH);
     };
 
     const onSubmit = async (id: string, todo: FormData) => {
