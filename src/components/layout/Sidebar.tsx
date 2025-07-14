@@ -1,8 +1,10 @@
+import { Box } from "../ui"
+
 const Sidebar = () => {
     return (
-        <div>
+        <Box className="w-1/8 bg-green-100">
             <h1>Sidebar</h1>
-        </div>
+        </Box>
     )
 }
 

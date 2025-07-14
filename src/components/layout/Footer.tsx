@@ -1,8 +1,10 @@
+import { Box } from "../ui"
+
 const Footer = () => {
     return (
-        <div>
+        <Box className="bg-gray-100 h-16">
             <h1>Footer</h1>
-        </div>
+        </Box>
     )
 }
 

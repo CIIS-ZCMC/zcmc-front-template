@@ -1,3 +1,4 @@
+import Avatar from "./Avatar";
 import Box from "./Box";
 import Button from "./Button";
 import Toast from "./Toast";
@@ -7,6 +8,7 @@ import Typography from "./Typography";
 import Spinner from "./Spinner";
 
 export { 
+    Avatar,
     Box,
     Button, 
     Toast, 
