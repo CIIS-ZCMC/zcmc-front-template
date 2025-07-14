@@ -4,16 +4,19 @@ import ToastContainer from './components/ui/ToastContainer';
 // Router
 import { RouterProvider } from 'react-router-dom';
 import appRoute from './routes/appRoute';
+import { SidebarProvider } from './contexts/SidebarContext';
 
 function App() {
   return (
-    <ToastProvider>
-      <div className="App">
-        {/* <ExampleComponent /> */}
-        <RouterProvider router={appRoute} />
-        <ToastContainer />
-      </div>
-    </ToastProvider>
+    <SidebarProvider>
+      <ToastProvider>
+        <div className="App">
+          {/* <ExampleComponent /> */}
+          <RouterProvider router={appRoute} />
+          <ToastContainer />
+        </div>
+      </ToastProvider>
+    </SidebarProvider>
   )
 }
 
