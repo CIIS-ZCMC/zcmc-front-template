@@ -14,22 +14,24 @@ import TodoCreateRoute from "../pages/todos/TodoCreateRoute.tsx"
 import TodoEditRoute from "../pages/todos/TodoEditRoute.tsx"
 import TodoViewRoute from "../pages/todos/TodoViewRoute.tsx"
 
+import { LayoutDashboard, ListTodo } from "lucide-react"
+
 const authRoute = [
     {
         path: "/login",
-        element: <SignInRoute />
+        element: <SignInRoute />,
     },
     {
         path: "/register",
-        element: <SignUpRoute />
+        element: <SignUpRoute />,
     },
     {
         path: "/account-recovery",
-        element: <AccountRecoverRoute />
+        element: <AccountRecoverRoute />,
     },
     {
         path: "/authenticate-session-id",
-        element: <SessionBaseAuthRoute />
+        element: <SessionBaseAuthRoute />,
     }
 ]
 
@@ -37,7 +39,9 @@ const DashboardRoute = [
     {
         index: true,
         path: "/dashboard",
-        element: <DashboardPageRoute />
+        element: <DashboardPageRoute />,
+        icon: <LayoutDashboard />,
+        label: "Dashboard"
     }
 ]
 
@@ -45,31 +49,42 @@ const TodoRoute = [
     {
         path: "/todos",
         element: <TodoListRoute />,
+        icon: <ListTodo />,
+        label: "Todos",
         children: [
             {
                 path: "/todos/create",
-                element: <TodoCreateRoute />
+                element: <TodoCreateRoute />,
+                icon: <ListTodo />,
+                label: "Create Todo",
             },
             {
                 path: "/todos/edit/:id",
-                element: <TodoEditRoute />
+                element: <TodoEditRoute />,
+                icon: <ListTodo />,
+                label: "Edit Todo",
+                
             },
             {
                 path: "/todos/view/:id",
-                element: <TodoViewRoute />
+                element: <TodoViewRoute />,
+                icon: <ListTodo />,
+                label: "View Todo",
             }
         ]
     },
 ]
 
+export const sidebarRoute = [
+    ...DashboardRoute,
+    ...TodoRoute
+];
+
 const appRoute = [
     {
         path: "/",
         element: <AppLayout />,
-        children: [
-            ...DashboardRoute,
-            ...TodoRoute
-        ]
+        children: sidebarRoute
     }
 ]
 
