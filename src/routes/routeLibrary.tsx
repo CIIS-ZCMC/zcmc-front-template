@@ -28,7 +28,7 @@ const authRoute = [
         element: <AccountRecoverRoute />
     },
     {
-        path: "/session-base-auth",
+        path: "/authenticate-session-id",
         element: <SessionBaseAuthRoute />
     }
 ]
