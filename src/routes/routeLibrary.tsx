@@ -37,8 +37,7 @@ const DashboardRoute = [
     {
         index: true,
         path: "/dashboard",
-        element: <DashboardPageRoute />,
-        children: []
+        element: <DashboardPageRoute />
     }
 ]
 
