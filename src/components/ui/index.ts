@@ -6,6 +6,7 @@ import ToastContainer from "./ToastContainer";
 import TextField from "./TextField";
 import Typography from "./Typography";
 import Spinner from "./Spinner";
+import SidebarMenuItem from "./SidebarMenuItem";
 
 export { 
     Avatar,
@@ -15,5 +16,6 @@ export {
     ToastContainer,
     TextField,
     Typography,
-    Spinner
+    Spinner,
+    SidebarMenuItem
 };
