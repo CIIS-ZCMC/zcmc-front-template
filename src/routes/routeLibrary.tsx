@@ -24,7 +24,7 @@ const authRoute = [
         element: <SignUpRoute />
     },
     {
-        path: "/account-recover",
+        path: "/account-recovery",
         element: <AccountRecoverRoute />
     },
     {

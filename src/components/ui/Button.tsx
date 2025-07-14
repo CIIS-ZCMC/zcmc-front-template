@@ -18,7 +18,7 @@ interface ButtonProps {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-    text: 'bg-transparent text-primary hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium',
+    text: 'bg-transparent hover:bg-gray-100 px-3 py-2 rounded-md text-sm',
     outline: 'border border-primary text-primary px-3 py-2 rounded-md text-sm font-medium bg-transparent hover:bg-primary hover:text-white transition-colors',
     contained: 'btn-contained px-3 py-2 rounded-md text-sm font-medium text-white',
 };
