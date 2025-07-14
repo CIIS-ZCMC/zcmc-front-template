@@ -1,4 +1,4 @@
-import { TodosListPage } from "../../features/todos";
+import { TodosListPage } from "@/features/todos";
 
 const TodosListRoute = () => {
     return (

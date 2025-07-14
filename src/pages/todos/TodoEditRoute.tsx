@@ -1,4 +1,4 @@
-import { TodosEditPage } from "../../features/todos";
+import { TodosEditPage } from "@/features/todos";
 
 const TodoEditRoute = () => {
     return (

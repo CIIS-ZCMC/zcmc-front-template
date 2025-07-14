@@ -1,4 +1,4 @@
-import { AccountRecoveryPage } from "../../features/authentication"
+import { AccountRecoveryPage } from "@/features/authentication"
 
 const AccountRecoverRoute = () => {
     return (

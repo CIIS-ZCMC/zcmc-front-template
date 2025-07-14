@@ -1,6 +1,6 @@
 import referral_api from "./apiClient";
-import type { GetApiParams } from "../types/getApi.types";
-import { TODO_BASE_PATH } from "../constants/apiBasePath";
+import type { GetApiParams } from "@/types/getApi.types";
+import { TODO_BASE_PATH } from "@/constants/apiBasePath";
     
 export const getTodosApi = async (params: GetApiParams) => {
     return await referral_api.get(TODO_BASE_PATH, {params});

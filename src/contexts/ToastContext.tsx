@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, useCallback } from 'react';
-import type { Toast } from '../types/toast.types';
-import type { ToastContextType } from '../types/toast.types';
+import type { Toast } from '@/types/toast.types';
+import type { ToastContextType } from '@/types/toast.types';
 
 // Toast Reducer
 type ToastAction = 

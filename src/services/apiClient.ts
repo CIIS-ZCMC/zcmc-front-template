@@ -1,5 +1,5 @@
 import axios from "axios";
-import {API_BASE_URL, APP_ENV} from "../constants/appConfig.ts";
+import {API_BASE_URL, APP_ENV} from "@/constants/appConfig";
 import { logout } from "./authService";
 
 const referral_api = axios.create({

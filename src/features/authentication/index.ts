@@ -2,3 +2,4 @@ export {default as SessionBaseAuthPage} from "./components/SessionBaseAuthPage.t
 export {default as SignInPage} from "./components/SignInPage.tsx"
 export {default as SignUpPage} from "./components/SignUpPage.tsx"
 export {default as AccountRecoveryPage} from "./components/AccountRecoveryPage.tsx"
+export {default as useAuthHook} from "./hooks/authHook"

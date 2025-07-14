@@ -1,4 +1,4 @@
-import { SessionBaseAuthPage } from "../../features/authentication"
+import { SessionBaseAuthPage } from "@/features/authentication"
 
 const SessionBaseAuthRoute = () => {
     return (

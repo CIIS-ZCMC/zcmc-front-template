@@ -1,4 +1,4 @@
-import { TodoViewPage } from "../../features/todos";
+import { TodoViewPage } from "@/features/todos";
 
 const TodoDetailRoute = () => {
     return (

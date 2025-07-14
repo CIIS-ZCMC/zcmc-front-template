@@ -1,4 +1,4 @@
-import { useAuthStore } from "../stores/authStore";
+import { useAuthStore } from "@/stores/authStore";
 import referral_api from "./apiClient";
 
 export const login = async () => {

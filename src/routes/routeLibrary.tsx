@@ -1,18 +1,18 @@
-import SignInRoute from "../pages/authentications/SignInRoute.tsx"
-import SignUpRoute from "../pages/authentications/SignUpRoute.tsx"
-import AccountRecoverRoute from "../pages/authentications/AccountRecoverRoute.tsx"
-import SessionBaseAuthRoute from "../pages/authentications/SessionBaseAuthRoute.tsx"
+import SignInRoute from "@/pages/authentications/SignInRoute.tsx"
+import SignUpRoute from "@/pages/authentications/SignUpRoute.tsx"
+import AccountRecoverRoute from "@/pages/authentications/AccountRecoverRoute.tsx"
+import SessionBaseAuthRoute from "@/pages/authentications/SessionBaseAuthRoute.tsx"
 
-import AppLayout from "../components/layout/AppLayout.tsx"
+import AppLayout from "@/components/layout/AppLayout.tsx"
 
 // Dashboard Route
-import DashboardPageRoute from "../pages/dashboard/DashbourPageRoute.tsx"
+import DashboardPageRoute from "@/pages/dashboard/DashbourPageRoute.tsx"
 
 // Todo Route
-import TodoListRoute from "../pages/todos/TodosListRoute.tsx"
-import TodoCreateRoute from "../pages/todos/TodoCreateRoute.tsx"
-import TodoEditRoute from "../pages/todos/TodoEditRoute.tsx"
-import TodoViewRoute from "../pages/todos/TodoViewRoute.tsx"
+import TodoListRoute from "@/pages/todos/TodosListRoute.tsx"
+import TodoCreateRoute from "@/pages/todos/TodoCreateRoute.tsx"
+import TodoEditRoute from "@/pages/todos/TodoEditRoute.tsx"
+import TodoViewRoute from "@/pages/todos/TodoViewRoute.tsx"
 
 import { LayoutDashboard, ListTodo } from "lucide-react"
 

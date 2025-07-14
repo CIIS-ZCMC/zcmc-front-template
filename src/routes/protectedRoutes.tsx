@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from "react-router-dom";
 import { Navigate, Outlet } from "react-router-dom";
-import {useAuthStore} from "../stores/authStore";
+import {useAuthStore} from "@/stores/authStore";
 
 const ProtectedRoutes = ({ children, requiredRoles = [] }: { children: React.ReactNode, requiredRoles: string[] }) => {
     const { auth } = useAuthStore();

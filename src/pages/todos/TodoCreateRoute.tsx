@@ -1,4 +1,4 @@
-import{ TodosCreatePage } from "../../features/todos";
+import{ TodosCreatePage } from "@/features/todos";
 
 const TodoCreateRoute = () => {
     return (

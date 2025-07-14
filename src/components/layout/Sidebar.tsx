@@ -1,7 +1,7 @@
 import { Box, Button, Typography, SidebarMenuItem } from "../ui"
-import { useSidebar } from "../../contexts/SidebarContext";
+import { useSidebar } from "@/contexts/SidebarContext";
 import {sidebarRoute} from "@/routes/routeLibrary";
-import { APP_NAME } from "../../constants/appConfig";
+import { APP_NAME } from "@/constants/appConfig";
 
 const Sidebar = () => {
     const { isOpen } = useSidebar();

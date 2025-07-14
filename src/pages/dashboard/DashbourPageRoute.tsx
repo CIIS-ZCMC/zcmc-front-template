@@ -1,4 +1,4 @@
-import { DashboardPage } from "../../features/dashboard";
+import { DashboardPage } from "@/features/dashboard";
 
 const DashboardPageRoute = () => {
     return (

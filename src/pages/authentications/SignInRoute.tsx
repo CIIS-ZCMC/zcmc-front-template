@@ -1,4 +1,4 @@
-import { SignInPage } from "../../features/authentication"
+import { SignInPage } from "@/features/authentication"
 
 const SignInRoute = () => {
     return (
