@@ -24,7 +24,7 @@ const SignInPage = () => {
                         <TextField label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     </Box>
                     <Box className="flex justify-end">            
-                        <Button label='Forgot Password?' variant="text" />
+                        <Button label='Forgot Password?' variant="text" onClick={() => navigate('/account-recovery')} />
                     </Box>
                     <Button label="Sign In" type="submit" variant="contained" className="w-full"/>
                     <Box className="flex justify-end">
