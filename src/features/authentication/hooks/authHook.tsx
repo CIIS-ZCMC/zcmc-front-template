@@ -5,6 +5,8 @@ interface AuthState {
     setEmail: (email: string) => void;
     password: string;
     setPassword: (password: string) => void;
+    confirmPassword: string;
+    setConfirmPassword: (confirmPassword: string) => void;
     name: string;
     setName: (name: string) => void;
     handleSignIn: (e: FormEvent) => void;
@@ -16,6 +18,7 @@ interface AuthState {
 const useAuthHook = (): AuthState => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [name, setName] = useState("");
 
     const handleSignIn = (e: FormEvent) => {
@@ -42,6 +45,8 @@ const useAuthHook = (): AuthState => {
         setEmail,
         password,
         setPassword,
+        confirmPassword,
+        setConfirmPassword,
         name,
         setName,
         handleSignIn,

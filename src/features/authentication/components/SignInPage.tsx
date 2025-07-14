@@ -1,8 +1,10 @@
 import Form from "@/components/common/Form";
 import useAuthHook from "../hooks/authHook.tsx";
-import {Box, Button, TextField} from "@/components/ui";
+import {Box, Button, TextField, Typography} from "@/components/ui";
+import { useNavigate } from "react-router-dom";
 
 const SignInPage = () => {
+    const navigate = useNavigate();
     const { 
         email, 
         setEmail, 
@@ -13,7 +15,7 @@ const SignInPage = () => {
     
     return (
         <div className="min-h-screen flex items-center justify-center">
-          <div className="bg-white p-8 rounded shadow">
+          <div className="w-1/6 bg-white p-8 rounded shadow">
             <h1 className="text-2xl font-bold mb-4 text-black">Sign In</h1>
             <Form onSubmit={handleSignIn}>
                 <Box className="space-y-4">
@@ -25,6 +27,12 @@ const SignInPage = () => {
                         <Button label='Forgot Password?' variant="text" />
                     </Box>
                     <Button label="Sign In" type="submit" variant="contained" className="w-full"/>
+                    <Box className="flex justify-end">
+                        <Typography variant="p" className="text-gray-600">
+                            Don't have an account? 
+                            <Button label="Sign Up" variant="text" className="font-bold" onClick={() => navigate('/register')} />
+                        </Typography>
+                    </Box>
                 </Box>
             </Form>
           </div>
